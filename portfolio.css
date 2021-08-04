@@ -1,0 +1,427 @@
+body
+{
+	scroll-behavior: smooth;
+}
+.container
+{
+	padding: 0 100px;
+}
+.nav-div
+{
+	background: white;
+	padding: 0 100px;
+	width: 100%;
+	box-shadow: 2px 2px 6px 1px #DCDCDC;
+}
+.top-nav
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-left-items 
+{
+	display: flex;
+	align-items: center;
+}
+.logo
+{
+	color: grey;
+	font-size: 20px;
+}
+
+.nav-left-items ul li.active a
+{
+	border-top: 3px solid #6752ed;
+}
+.nav-left-items ul
+{
+	display: flex;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 50px;
+}
+
+.item
+{
+	text-decoration: none;
+	margin: 0 10px;
+	color: grey;
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	padding: 30px 8px;
+	position: relative;
+}
+.item:hover
+{
+	color: #6752ed;
+}
+.item:after
+{
+	content: "";
+	position: absolute;
+	background-color: #6752ed;
+	height: 3px;
+	width: 0;
+	left: 0;
+	top: -1px;
+	transition: .3s;
+}
+.item:hover:after
+{
+	width: 100%;
+}
+
+.search-input
+{
+	display: flex;
+	align-items: center;
+	border: .1px solid grey;
+	margin: 20px 0 20px 20px;
+	padding: 4px;
+	background: transparent;
+	border-radius: 30px;
+
+}
+.input
+{
+	outline: none;
+	width: 20vw;
+	border-radius: 20px;
+	border: none;
+	font-size: 17px;
+	padding-left: 8px;
+	margin-right: 2px;
+	background: transparent;
+	color: black;
+}
+::placeholder
+{
+	color: grey;
+}
+.search-icon
+{
+	font-size: 15px;
+	margin-right: 10px;
+	color: grey;
+}
+.search-icon:hover
+{
+	cursor: pointer;
+}
+.second-div
+{
+	padding: 100px 0 50px 0;
+}
+.photo-text
+{
+	margin-top: 120px;
+	text-align: left;
+}
+.photo-text h1
+{
+	font-size: 50px;
+	margin-bottom: 40px;
+	color: #564e89;
+	font-weight: bold;
+}
+.photo-text p
+{
+	font-size: 20px;
+	margin-bottom: 30px;
+	color: grey;
+}
+.photo-btn41
+{
+	padding: 10px 20px;
+	border-radius: 30px;
+	font-size: 17px;
+	border: .5px solid transparent;
+	background-image: linear-gradient(45deg, #6752ed 30%, #ab47f7 100%);
+	color: white;
+	margin-right: 10px;
+}
+.photo-btn41:hover
+{
+	background: white;
+	color: #6752ed;
+	border: .5px solid #ab47f7;
+	outline: none;
+}
+.photo-btn42
+{
+	border: .5px solid #ab47f7;
+	padding: 10px 20px;
+	border-radius: 30px;
+	font-size: 17px;
+	color: #6752ed;
+}
+.photo-btn42:hover
+{
+	background-image: linear-gradient(45deg, #6752ed 30%, #ab47f7 100%);
+	color: white;
+}
+.image
+{
+	height: 450px;
+	width: 930px;
+	background-image: url(2.jpg);
+	background-size: cover;
+	margin: 30px 0 40px 0;
+	border-radius: 500px 0 0 500px;
+	position: relative;
+}
+.third-div-buttons
+{
+	padding: 30px 0 15px 0;
+}
+.third-div-buttons ul
+{
+	display: flex;
+	list-style: none;
+}
+.third-div-buttons ul li
+{
+	margin-right: 10px;
+}
+.third-div-buttons ul li a
+{
+	text-decoration: none;
+	padding: 8px 15px;
+	font-size: 19px;
+	border-radius: 20px;
+	border: none;
+	color: #564e89;
+	margin: 0;
+}
+.third-div-buttons ul li a:hover
+{
+	background-image: linear-gradient(45deg, #6752ed 30%, #ab47f7 100%);
+	/*color: white;*/
+	cursor: pointer;
+}
+.third-div-buttons ul li.active a
+{
+	background: #fc595a;
+	color: white;
+}
+.forth-div
+{
+	margin-top: 30px;
+}
+.for-massage
+{
+	margin: 0 15px 80px 0;
+}
+/*.card-image
+{
+	height: 450px;
+	width: 350px;
+	border-radius: 10px;
+	transition: 1.5s;
+}*/
+.for-massage p
+{
+	margin: 15px 0 0 0;
+	padding: 0;
+	font-size: 17px;
+	color: #8875f2;
+}
+.for-massage h5
+{
+	margin: 8px 0 0 0;
+	font-size: 22px;
+	padding: 0;
+	font-weight: bold;
+	color: #554d89;
+}
+
+
+ /*image flip & hover start*/
+
+.wrapper{
+  height: 450px;
+  width: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.wrapper .card{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  transform: translateY(0deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.wrapper:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+.wrapper .card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.back-face p
+{
+	color: white;
+  	font-size: 17px;
+  	padding: 0 20px;
+}
+.wrapper .back-face{
+  background-image: linear-gradient(45deg, #6752ed 30%, #ab47f7 100%);
+  transform: rotateY(180deg);
+}
+.wrapper:hover > .back-face{
+  transform: rotateY(0deg);
+}
+
+ /*image flip & hover end*/
+
+
+ .eleventh-div
+{
+	width: 100%;
+}
+.eleventh-div2
+{
+	background: #6752ed;
+	height: 120px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 20px;
+	margin-top: 30px;
+	border-radius: 8px;
+}
+.eleventh-div2 div
+{
+	display: flex;
+	align-items: center;
+	color: white;
+	font-size: 22px;
+}
+.eleventh-div2  i
+{
+	margin-right: 8px;
+}
+.eleventh-div2 button
+{
+	border: .5px solid #b346fb;
+	padding: 10px 30px;
+	border-radius: 30px;
+	background: transparent;
+	font-size: 20px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+.footer-div
+{
+	margin-top: 100px;
+	width: 100%;
+}
+.footer-logo
+{
+	margin-right: 30px;
+}
+.footer-logo h1
+{
+	font-size: 25px;
+	text-align: left;
+	color: #544c88;
+}
+.footer-logo p
+{
+	font-size: 17px;
+	color: grey;
+	margin-top: 30px;
+}
+.footer-logo hr
+{
+	width: 30%;
+	margin-top: 30px;
+	height: 3px;
+}
+.footer-address h1
+{
+	font-size: 25px;
+	text-align: left;
+	color: #544c88;
+	margin-bottom: 30px;
+}
+.footer-address i
+{
+	margin-right: 10px;
+}
+.footer-address p
+{
+	font-size: 17px;
+	color: grey;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+}
+.footer-links1
+{
+	display: flex;
+	flex-direction: column;
+}
+.footer-links1 h1
+{
+	font-size: 25px;
+	text-align: left;
+	color: #544c88;
+	margin-bottom: 30px;
+}
+.footer-links1 a
+{
+	font-size: 17px;
+	color: #544c88;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+.footer-links2
+{
+	display: flex;
+	flex-direction: column;
+	padding-top: 60px;
+}
+.footer-links2 a
+{
+	font-size: 17px;
+	color: #544c88;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+#business
+{
+	display: none;
+}
+#marketing
+{
+	display: none;
+}
+#immovables
+{
+	display: none;
+}
+#finance
+{
+	display: none;
+}
+#tech
+{
+	display: none;
+}
+#art
+{
+	display: none;
+}
